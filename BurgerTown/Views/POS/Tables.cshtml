@@ -1,0 +1,43 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "Tables";
+    Layout = "~/Views/Shared/_POSLayout.cshtml";
+}
+
+<section class="main-place" id="main">
+    <main class="w-100" id="menuWillAdd">
+        <div id="productsArea">
+            <section>
+                <h2>Masalar</h2>
+                <div class="products d-grid-1">
+                    @foreach (var masa in Model.masalar)
+                    {
+                        if (masa.isActive)
+                        {
+                            int MasadakiMalzemeSayisi = Model.context.GeciciMalzemeler.Where(q => q.TableID == masa.ID).ToList().Count;
+                            if (MasadakiMalzemeSayisi > 0)
+                            {
+                                <div class="product" style="background-color:red !important; width:200px; height:100px;">
+                                    <a style="color:white; text-decoration:none;" href="/POS/ShowTable/@masa.ID"><h5>@masa.Name</h5></a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="product" style="background-color:greenyellow !important; width:200px; height:100px;">
+                                    <a style="color:white; text-decoration:none;" href="/POS/ShowTable/@masa.ID"><h5>@masa.Name</h5></a>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </section>
+
+        </div>
+        <div class="w-100" id="menusFooter">
+            <i class="fa-solid fa-chevron-up" id="menusUp"></i>
+            <b class="mx-2">SCROLL</b>
+            <i class="fa-solid fa-chevron-down" id="menusDown"></i>
+        </div>
+    </main>
+</section>
+

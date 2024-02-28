@@ -1,0 +1,271 @@
+﻿@model BurgerTown.Models.BaseModel
+<div class="pop" id="hamburgerPop">
+    <div class="title my-2">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="popup-content">
+        <img src="@Model.secilenMalzeme.ImagePath" class="me-4" alt="hamb" />
+        <h3>@Model.secilenMalzeme.Name</h3>
+        <p>@Model.secilenMalzeme.Description</p>
+        <div class="popup-price-content border-bottom my-2 border-top">
+            <p>532.99 TL</p>
+            <b>333.19 TL</b>
+        </div>
+        <div class="popupCategories my-4 border-bottom">
+            <h5>1: Tost</h5>
+            <ul class="sizing">
+                <li>Tost Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Özel Tost Karışık</p>
+                    <b>+20 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Klasık Tost Karışık</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Kaşarlı Tost</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Sucuklu Tost</p>
+                    <b>+10 TL</b>
+                </li>
+            </ul>
+            <ul class="sizing">
+                <li>Boyut</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Normal Boy</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Büyük Boy</p>
+                    <b>+15 TL</b>
+                </li>
+            </ul>
+            <ul class="sizing">
+                <li>İçecekler</li>
+                <li>
+                    <input type="checkbox">
+                    <p>330ml Kola</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>330ml Sprite</p>
+                    <b>Ücretsiz</b>
+                </li>
+            </ul>
+            <ul class="">
+                <li>Çıkarılabilir Malzeme Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Domates İtemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Karabiber Olmasın</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Sos İtemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+            </ul>
+            <ul class="">
+                <li>Ekstra Yan Ürün Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Ekstra Yan Ürün İstemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Patates Kızartması</p>
+                    <b>+45 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (3 adet)</p>
+                    <b>+30 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (6 adet)</p>
+                    <b>+45 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (12 adet)</p>
+                    <b>+60 TL</b>
+                </li>
+            </ul>
+        </div>
+        <div class="popupCategories my-4 border-bottom">
+            <h5>2. Tost</h5>
+            <ul class="sizing">
+                <li>Tost Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Özel Tost Karışık</p>
+                    <b>+20 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Klasık Tost Karışık</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Kaşarlı Tost</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Sucuklu Tost</p>
+                    <b>+10 TL</b>
+                </li>
+            </ul>
+            <ul class="sizing">
+                <li>Boyut</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Normal Boy</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Büyük Boy</p>
+                    <b>+15 TL</b>
+                </li>
+            </ul>
+            <ul class="sizing">
+                <li>İçecekler</li>
+                <li>
+                    <input type="checkbox">
+                    <p>330ml Kola</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>330ml Sprite</p>
+                    <b>Ücretsiz</b>
+                </li>
+            </ul>
+            <ul class="">
+                <li>Çıkarılabilir Malzeme Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Domates İtemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Karabiber Olmasın</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Sos İtemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+            </ul>
+            <ul class="">
+                <li>Ekstra Yan Ürün Seçimi</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Ekstra Yan Ürün İstemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Patates Kızartması</p>
+                    <b>+45 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (3 adet)</p>
+                    <b>+30 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (6 adet)</p>
+                    <b>+45 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Soğan Halkası (12 adet)</p>
+                    <b>+60 TL</b>
+                </li>
+            </ul>
+        </div>
+        <div class="popupCategories my-4 ">
+            <h5>Promosyon</h5>
+            <ul class="sizing">
+                <li>Tatlılar</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Promosyon Tatlı İstemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Donut (6 adet)</p>
+                    <b>+40 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Donut (12 adet)</p>
+                    <b>+65 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Sütlaç</p>
+                    <b>+20 TL</b>
+                </li>
+            </ul>
+            <ul class="sizing">
+                <li>Dondurmalar</li>
+                <li>
+                    <input type="checkbox">
+                    <p>Promosyon Dondurma İstemiyorum</p>
+                    <b>Ücretsiz</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Algida Maraş Usulü Sade Cup Dondurma (105 ml.)</p>
+                    <b>+40 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Çilekli Dondurma</p>
+                    <b>+20 TL</b>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Muzlu DOndurma</p>
+                    <b>+20 TL</b>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-footer">
+        <div class="d-flex" id="scroll">
+            <i class="fa-solid fa-chevron-up footerPopUp"></i>
+            <b class="mx-2">KAYDIR</b>
+            <i class="fa-solid fa-chevron-down footerPopDown"></i>
+        </div>
+        <button class="btnAddPopup btn btn-success" disabled>
+            <span class="totalPopPrice"></span>
+            Kaydet
+        </button>
+    </div>
+</div>

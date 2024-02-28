@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="~/pastane/framework/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/pastane/framework/css/owl.theme.default.css">
+    <link rel="stylesheet" href="~/pastane/framework/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/pastane/style.css">
+    <title>QR MENU</title>
+</head>
+<body>
+    <header id="head">
+        <img src="logo.png" alt="logo" id="logoS">
+        <!-- <button id="btnHeader"><i class="fa-solid fa-globe"></i>Türkçe</button> -->
+        <div class="button-menu-container">
+            <button class="btn-outline-secondary d-flex" id="seenBtn">
+                <i class="fa-solid fa-globe"></i>
+                <span id="langText">English</span>
+            </button>
+            <div class="btn btn-secondary" id="hiddenBtn">
+                <i class="fa-solid fa-globe"></i>
+                <span id="giveText">Türkçe</span>
+            </div>
+        </div>
+
+
+    </header>
+    
+
+
+    @RenderBody()
+
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content animate__animated">
+            <span class="popup-close" onclick="closePopup()">×</span>
+            <img id="popupImage" class="popup-image animate__animated">
+            <h2 id="popupTitle" class="popup-title animate__animated"></h2>
+            <p id="popupContent" class="popup-content-text animate__animated"></p>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/pastane/framework/js/owl.carousel.js"></script>
+    <script src="~/pastane/framework/js/owl.carousel.min.js"></script>
+    <script src="~/pastane/script.js"></script>
+</body>
+</html>

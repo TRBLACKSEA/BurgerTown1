@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yukarı/Aşağı Kaydırma Butonları</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .scroll-container {
+      height: 1000px; /* Uzun bir içerik ekleyelim */
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    .scroll-button {
+      position: fixed;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: none; /* Sayfa yukarı veya aşağı kaydırılmadıkça gizli olsun */
+    }
+
+    #scrollUp {
+      bottom: 70px;
+      right: 20px;
+    }
+
+    #scrollDown {
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-container">
+    <!-- Uzun bir içerik alanı -->
+    <h1>Yukarı/Aşağı Kaydırma Butonları</h1>
+    <!-- ... diğer içerikler ... -->
+  </div>
+
+  <button id="scrollUp" class="scroll-button" onclick="scrollFunction(-100)">Yukarı</button>
+  <button id="scrollDown" class="scroll-button" onclick="scrollFunction(100)">Aşağı</button>
+
+  <script>
+    window.onscroll = function() {scrollVisibility()};
+    
+    function scrollVisibility() {
+      var buttons = document.querySelectorAll(".scroll-button");
+
+      // Sayfa belirli bir mesafeden aşağı kaydırıldığında butonları göster
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        buttons.forEach(function(button) {
+          button.style.display = "block";
+        });
+      } else {
+        buttons.forEach(function(button) {
+          button.style.display = "none";
+        });
+      }
+    }
+
+    function scrollFunction(amount) {
+      // Sayfayı belirli bir miktar yukarı veya aşağı kaydır
+      document.body.scrollTop += amount; // Safari
+      document.documentElement.scrollTop += amount; // Diğer tarayıcılar
+    }
+  </script>
+</body>
+</html>

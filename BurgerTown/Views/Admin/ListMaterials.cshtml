@@ -1,0 +1,64 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "ListMaterials";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:10px;">
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Yeni Malzeme</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Malzemeler</h3>
+            &ensp;
+            <a href="/Admin/AddMaterial/"><img src="~/AdminLTE-3.2.0/dist/img/plus.png" style="width:32px;height:32px;" /></a>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Mazleme Resmi</th>
+                        <th>Mazleme Adı</th>
+                        <th>Açıklama</th>
+                        <th>Kategori</th>
+                        <th>Birim Fiyat</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var malzeme in Model.malzemeler)
+                    {
+                        <tr>
+                            <td><img style="width:480px;height:270px;" src="@malzeme.ImagePath" alt="@malzeme.Description" /></td>
+                            <td>@malzeme.Name</td>
+                            <td>@malzeme.Description</td>
+                            @{string kategoriAdi;
+
+                                using (var context = new BurgerTown.Models.BurgerTownContext())
+                                {
+                                    kategoriAdi = context.Kategoriler.Where(q => q.ID == malzeme.CategoryID).FirstOrDefault().Description;
+                                }
+                            }
+                            
+                            <td>@kategoriAdi</td>
+                            <td>@malzeme.Price ₺</td>
+                            <td>
+                                <a href="/Admin/UpdateMaterial/@malzeme.ID"><img src="~/AdminLTE-3.2.0/dist/img/pencil.png" style="width:32px; height:32px;" alt="Güncelle" /></a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+

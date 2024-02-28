@@ -1,0 +1,60 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "ListFiches";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{string TableName = ""; }
+<div style="margin:10px;">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Fişler</h3>
+            &ensp;
+            <a href="/Admin/AddMaterial/"><img src="~/AdminLTE-3.2.0/dist/img/plus.png" style="width:32px;height:32px;" /></a>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Sipariş No</th>
+                        <th>Masa No</th>
+                        <th>Tarih</th>
+                        <th>Fiş Toplamı</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var fisBaslik in Model.fisBasliklari)
+                    {
+                        <tr>
+                            <td>@fisBaslik.OrderID</td>
+                            @{
+                                if (fisBaslik.TableID != 0)
+                                {
+                                     TableName = Model.context.Masalar.Where(q => q.ID == fisBaslik.TableID).FirstOrDefault().Name;
+                                }
+                                else
+                                {
+                                     TableName = "Paket Sipariş";
+                                }
+                            }
+                            <td>@TableName</td>
+
+                            <td>@fisBaslik.OrderDate</td>
+                            <td>@fisBaslik.Toplam ₺</td>
+                            <td>
+                                <a href="/Admin/ShowFiche/@fisBaslik.ID"><img src="~/AdminLTE-3.2.0/dist/img/eye.png" style="width:32px; height:32px;" alt="Güncelle" /></a>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+
+
+

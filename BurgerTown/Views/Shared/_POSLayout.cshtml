@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Sipariş Sistemi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/restorant/framework/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/restorant/framework/css/owl.theme.default.css">
+    <link rel="stylesheet" href="~/restorant/framework/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/restorant/style.css">
+</head>
+<body>
+    <header>
+        <div class="company-logo d-grid">
+
+            <!-- <img src="mes.png" alt="logo"> -->
+            <b><img src="~/AdminLTE-3.2.0/dist/img/metaposlogo.png" style="width:500px; height:80px;" alt="Meta Pos Logo" /></b>
+            <!-- <b>POS</b> -->
+        </div>
+        <nav>
+            <button class="btn-medium" id="" style="background-color:lawngreen;"><a href="/POS/POSMenu/"><img src="~/AdminLTE-3.2.0/dist/img/paper-bag.png" style="width:28px;height:28px;" alt="Alternate Text"/>Paket Sipariş</a></button>
+            <button class="btn-medium" id="seating"><a href="/POS/Tables/"><i class="fa-solid fa-chair"></i>Masalar</a></button>
+            <button class="btn-medium" id="takeout"><i class="fa-solid fa-door-open"></i>çıkış</button>
+            <input type="search" class="nav-search" placeholder="&#xF002; ÜRÜN ARA">
+            <button class="btn-medium" id="settings"><i class="fa-solid fa-gear"></i>ayarlar</button>
+        </nav>
+        <div class="other-inf">
+            <span class="user me-4"><i class="fa-solid fa-user me-2"></i>Maryanne</span>
+            <span class="time">5.22pm</span>
+            <span class="fullscreen-nav" id="fullscreenButton"><i class="fa-solid fa-compress"></i></span>
+        </div>
+    </header>
+
+    @RenderBody()
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/restorant/framework/js/owl.carousel.js"></script>
+    <script src="~/restorant/framework/js/owl.carousel.min.js"></script>
+    <script src="~/restorant/script.js"></script>
+
+</body>
+</html>

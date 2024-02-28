@@ -1,0 +1,56 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "UpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card card-primary" style="margin:15px;">
+    <div class="card-header">
+        <h3 class="card-title">Kategori Güncelle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form method="post" action="/Admin/UpdateCategory/">
+        <div class="card-body">
+            <div class="form-group" style="display:none;">
+                <input value="@Model.guncellencekKategori.ID" type="text" name="ID" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="form-group">
+                <label>Açıklama</label>
+                <input value="@Model.guncellencekKategori.Description" type="text" name="Description" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="form-group">
+                <label>Üst Kategori</label><br />
+                <select name="UpCategoryID" class="custom-select bg-light border-0 px-3" style="width:300px;">
+                    @{
+                        string ustkategoriadi;
+                        if (Model.guncellencekKategori.UpCategoryID != 0)
+                        {
+                            ustkategoriadi = Model.context.Kategoriler.Where(q => q.ID == Model.guncellencekKategori.UpCategoryID).FirstOrDefault().Description;
+                        }
+                        else
+                        {
+                            ustkategoriadi = "-";
+                        }
+
+                    }
+                    <option selected>@ustkategoriadi</option>
+                    @foreach (var kategori in Model.kategoriler)
+                    {
+                        <option value="@kategori.ID">@kategori.Description</option>
+                    }
+                </select>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" value="true" checked="@Model.guncellencekKategori.isMainCategory" name="isMainCategory" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Ana Kategori</label>
+            </div>
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Güncelle</button>
+        </div>
+    </form>
+</div>
+

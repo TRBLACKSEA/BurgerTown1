@@ -1,0 +1,88 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "ShowFiche";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div style="margin:10px;">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Sipariş No: <a style="color:cornflowerblue;">#@Model.SecilenFisBaslik.OrderID</a>&emsp;</h3>
+
+            @if (Model.SecilenFisBaslik.TableID == 0)
+            {
+                <h3 class="card-title">Sipariş Türü: <a style="color:cornflowerblue;">Paket Sipariş</a>&emsp;</h3>
+            }
+            else
+            {
+                string MasaAdi = Model.context.Masalar.Where(q => q.ID == Model.SecilenFisBaslik.TableID).FirstOrDefault().Name;
+                <h3 class="card-title">Sipariş Türü: <a style="color:cornflowerblue;">@MasaAdi</a>&emsp;</h3>
+            }
+            
+            <h3 class="card-title">Sipariş Tarihi: <a style="color:cornflowerblue;">#@Model.SecilenFisBaslik.OrderDate</a>&emsp;</h3>
+            @if (Model.SecilenFisBaslik.PurchaseMethod == false)
+            {
+                <h3 class="card-title">Ödeme Yöntemi: <a style="color: cornflowerblue;">Nakit</a>&emsp;</h3>
+            }
+            else
+            {
+                <h3 class="card-title">Ödeme Yöntemi: <a style="color:cornflowerblue;">Kredi Kartı</a>&emsp;</h3>
+            }
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Malzeme</th>
+                        <th>Birim Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        BurgerTown.Models.FisDetay fisDetay = Model.context.FisDetaylari.Where(q => q.FisBaslikID == Model.SecilenFisBaslik.ID).FirstOrDefault();
+                        string fisMalzemeleri = fisDetay.Malzemeler;
+                        List<int> FisMalzemeIDleri = new List<int>();
+                        foreach (string item in fisMalzemeleri.Split(','))
+                        {
+                            if (!string.IsNullOrEmpty(item))
+                            {
+                                int IDD = int.Parse(item);
+                                FisMalzemeIDleri.Add(IDD);
+                            }
+                        }
+
+
+                    }
+
+                    @foreach (var fisMalzemeID in FisMalzemeIDleri)
+                    {
+                        <tr>
+                            @{ BurgerTown.Models.Malzeme malzeme = Model.context.Malzemeler.Where(q => q.ID == fisMalzemeID).FirstOrDefault();}
+                            <td>@malzeme.Name</td>
+                            <td>@malzeme.Price</td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+        <div class="card-footer">
+            <h3 class="card-title">KDV Oranı(%): <a style="color:chocolate;">%@Model.SecilenFisBaslik.KDVOrani</a>&emsp;</h3>
+            <h3 class="card-title">KDV Miktarı: <a style="color:chocolate;">@Model.SecilenFisBaslik.KDVMiktari₺</a>&emsp;</h3>
+            <h3 class="card-title">Ara Toplam: <a style="color:chocolate;">@Model.SecilenFisBaslik.AraToplam₺</a>&emsp;</h3>
+            <h3 class="card-title">Toplam: <a style="color:chocolate;">## @Model.SecilenFisBaslik.Toplam₺ ##</a>&emsp;</h3>
+            @{ BurgerTown.Models.Kampanya uygulananKampanya = Model.context.Kampanyalar.Where(q => q.ID == fisDetay.UygulananKampanyaID).FirstOrDefault(); }
+            @if (uygulananKampanya != null)
+            {
+                <h3 class="card-title">Uygulanan Kampanya: <a style="color:chocolate;">#@uygulananKampanya.Name</a></h3>
+            }
+            else
+            {
+                <h3 class="card-title">Uygulanan Kampanya: <a style="color:chocolate;">#Yok</a></h3>
+            }
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+
+

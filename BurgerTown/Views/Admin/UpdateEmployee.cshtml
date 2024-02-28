@@ -1,0 +1,39 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "UpdateEmployee";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:10px;">
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Personel Güncelle</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" action="/Admin/UpdateEmployee/">
+            <div class="card-body">
+                <div class="form-group" style="display:none;">
+                    <input name="ID" value="@Model.GuncellenecekPersonel.ID" type="text" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-group">
+                    <label>Personel Adı</label>
+                    <input name="Name" value="@Model.GuncellenecekPersonel.Name" type="text" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-group">
+                    <label>Parola</label>
+                    <input name="Password" value="@Model.GuncellenecekPersonel.Password" type="password" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-check">
+                    @Html.CheckBox("isAdmin", Model.GuncellenecekPersonel.isAdmin)
+                    <label class="form-check-label" for="exampleCheck1">Yönetici Mi?</label>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+            </div>
+        </form>
+    </div>
+</div>
+

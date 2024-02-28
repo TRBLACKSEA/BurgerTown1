@@ -1,0 +1,79 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "AddMaterial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:10px;">
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Yeni Malzeme</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" action="/Admin/AddMaterial/" enctype="multipart/form-data">
+            <div class="card-body">
+                <div class="form-group">
+                    <input name="ID" type="text" style="display:none;" />
+                </div>
+                <div class="form-group">
+                    <img id="material_image" src="~/AdminLTE-3.2.0/dist/img/placeholder.png" style="width:480px;height:270px;" alt="Malzeme Resmi" />
+                </div>
+                &nbsp;
+                <div class="form-group">
+                    <label for="exampleInputFile">Malzeme Resmi</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input name="ImagePath" type="file" class="custom-file-input" id="SelectImageButton">
+                            <label id="SelectedImagePath" class="custom-file-label" for="SelectImageButton">Resim Seçiniz</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Malzeme Adı</label>
+                    <input name="Name" type="text" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input name="Description" type="text" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-group">
+                    <label>Fiyatı</label>
+                    <input name="Price" type="text" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Kategori</label><br />
+                    <select name="CategoryID" class="custom-select bg-light border-0 px-3" style="width:300px;">
+                        @foreach (var kategori in Model.context.Kategoriler.ToList())
+                        {
+                            {
+                                <option value="@kategori.ID">@kategori.Description</option>
+                            }
+                        }
+
+                    </select>
+                </div>
+                <div class="form-check">
+                    @Html.CheckBox("isUsing", true)
+                    <label class="form-check-label" for="exampleCheck1">Kullanımda mı?</label>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Ekle</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script>
+    let btn = document.getElementById("SelectImageButton");
+    let pic = document.getElementById("material_image");
+    let label = document.getElementById("SelectedImagePath");
+    btn.onchange = function () {
+        pic.src = URL.createObjectURL(btn.files[0]);
+        label.innerText = btn.files[0].name;
+    }
+</script>
+

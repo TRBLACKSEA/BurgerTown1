@@ -1,0 +1,46 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_QRMenuLayout.cshtml";
+}
+<nav id="nav">
+    <div class="nav-menu-owl-rest owl-carousel owl-theme" id="mainNav">
+        @foreach (var kategori in Model.kategoriler)
+        {
+            <div class="navMenu-item"><a href="#@kategori.Description">@kategori.Description</a></div>
+        }
+    </div>
+    <div class="altNav">
+        @foreach (var malzeme in Model.malzemeler)
+        {
+            <div class="nav-category @malzeme.Name">
+                <span class="nav-category-item">
+                    @{ string categoryName = Model.kategoriler.Where(q => q.ID == malzeme.CategoryID).FirstOrDefault().Description;} 
+                    <a href="#@categoryName-subcategory-1">@malzeme.Name</a>
+                </span>
+            </div>
+        }
+    </div>
+</nav>
+<main id="cards" class=" container d-grid">
+    @foreach (var kategori in Model.kategoriler)
+    {
+        <section class="my-2" id="@kategori.Description">
+            <h4>@kategori.Description</h4>
+            <div class="tmt_cards my-3" id="mostLoved-subcategory-1">
+                @{ List<BurgerTown.Models.Malzeme> kategoriMalzemeler = Model.context.Malzemeler.Where(q =>q.isUsing == true && q.CategoryID == kategori.ID).ToList();}
+                @foreach (var malzeme in kategoriMalzemeler)
+                {
+                    <div class="tmt_card large" data-title="@malzeme.Name" data-content="@malzeme.Description" data-image="@malzeme.ImagePath">
+                        <img src="@malzeme.ImagePath" alt="@malzeme.Name">
+                        <div class="tmt_card-content">
+                            <b>@malzeme.Name</b>
+                            <p>@malzeme.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+    }
+</main>
+

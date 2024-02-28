@@ -1,0 +1,56 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "ListOffers";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:10px;">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Kampanyalar</h3>
+            &ensp;
+            <a href="/Admin/AddOffer/"><img src="~/AdminLTE-3.2.0/dist/img/plus.png" style="width:32px;height:32px;" /></a>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Kampanya Adı</th>
+                        <th>Açıklama</th>
+                        <th>Durum</th>
+                        <th>İşlem</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var kampanya in Model.kampanyalar)
+                    {
+                    <tr>
+                        <td>@kampanya.Name</td>
+                        <td>@kampanya.Description</td>
+                        @{
+                            string Durum="";
+                            if (kampanya.isUsing)
+                            {
+                                Durum = "Kullanımda";
+                            }
+                            else
+                            {
+                                Durum = "Kullanımda Değil";
+                            }
+                        }
+                        <td>@Durum</td>
+                        <td>
+                            <a href="/Admin/UpdateOffer/@kampanya.ID"><img src="~/AdminLTE-3.2.0/dist/img/pencil.png" style="width:32px; height:32px;" alt="Güncelle" /></a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+
+            </table>
+        </div>
+        <!-- /.card-body -->
+    </div>
+</div>
+

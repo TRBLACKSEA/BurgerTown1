@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="framework/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="framework/css/owl.theme.default.css">
+    <link rel="stylesheet" href="framework/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="head">
+        <img src="logo.png" alt="logo" id="logoS">
+        <!-- <button id="btnHeader"><i class="fa-solid fa-globe"></i>Türkçe</button> -->
+        <div class="button-menu-container">
+            <button class="btn-outline-secondary d-flex" id="seenBtn">
+                <i class="fa-solid fa-globe"></i>
+                <span id="langText">English</span>
+            </button>
+            <div class="btn btn-secondary" id="hiddenBtn">
+                <i class="fa-solid fa-globe"></i>
+                <span id="giveText">Türkçe</span>
+            </div>
+        </div>
+        
+        
+    </header>
+    <nav id="nav">
+        <div class="nav-menu-owl-rest owl-carousel owl-theme" id="mainNav">
+            <div class="navMenu-item"><a href="#mostLoved">En Çok Sevilenler</a></div>
+            <div class="navMenu-item"><a href="#cupCakes">Kupa Tatlılar</a></div>
+            <div class="navMenu-item"><a href="#meze">Maze</a></div>
+            <div class="navMenu-item"><a href="#kruvasan">Kruvasanlar</a></div>
+            <div class="navMenu-item"><a href="#cookie">Kurabiyeler</a></div>
+            <div class="navMenu-item"><a href="#mofin">Muffinler</a></div>
+            <div class="navMenu-item"><a href="#icecream">Dondurmalar</a></div>
+            <div class="navMenu-item"><a href="#pasta">Pastalar</a></div>
+            <div class="navMenu-item"><a href="#tatli">Diğer Tatlılar</a></div>
+            <div class="navMenu-item"><a href="#milshake">Milshakeler</a></div>
+            <div class="navMenu-item"><a href="#icecoffe">Soğuk Kahveler</a></div>
+            <div class="navMenu-item"><a href="#icedrinks">Soğuk İçecekler</a></div>
+            <div class="navMenu-item"><a href="#hotdrink">Sıcak İçecekler</a></div>
+            <div class="navMenu-item"><a href="#hotcoffe">Sıcak Kahveler</a></div>
+            
+        </div>
+        <div class="altNav">
+            <div class="nav-category mostLoved">
+                <span class="nav-category-item">
+                    <a href="#mostLoved-subcategory-1">mostLoved 1</a>
+                </span>
+
+            </div>
+            <div class="nav-category cupCakes">
+                <span class="nav-category-item">
+                    <a href="#cupCakes-subcategory-1">cupCakes 1</a>
+                </span>
+
+            </div>
+            <div class="nav-category meze">
+                <span class="nav-category-item">
+                    <a href="#meze-subcategory-1">meze 1</a>
+                </span>
+            </div>
+            <div class="nav-category kruvasan">
+                <span class="nav-category-item">
+                    <a href="#kruvasan-subcategory-1">kruvasan 1</a>
+                </span>
+            </div>
+            <div class="nav-category cookie">
+                <span class="nav-category-item">
+                    <a href="#cookie-subcategory-1">cookie 1</a>
+                </span>
+            </div>
+            <div class="nav-category mofin">
+                <span class="nav-category-item">
+                    <a href="#mofin-subcategory-1">mofin 1</a>
+                </span>
+            </div>
+            <div class="nav-category icecream">
+                <span class="nav-category-item">
+                    <a href="#icecream-subcategory-1">dondurma 1</a>
+                </span>
+
+            </div>
+            <div class="nav-category pasta">
+                <span class="nav-category-item">
+                    <a href="#pasta-subcategory-1">pasta 1</a>
+                </span>
+
+            </div>
+            <div class="nav-category tatli">
+                <span class="nav-category-item">
+                    <a href="#tatli-subcategory-1">tatlı 1</a>
+                </span>
+            </div>
+            <div class="nav-category icecoffe">
+                <span class="nav-category-item">
+                    <a href="#icecoffe-subcategory-1">icecoffe 1</a>
+                </span>
+            </div>
+            <div class="nav-category milshake">
+                <span class="nav-category-item">
+                    <a href="#milshake-subcategory-1">milshake 1</a>
+                </span>
+            </div>
+            <div class="nav-category icedrinks">
+                <span class="nav-category-item">
+                    <a href="#icedrinks-subcategory-1">icedrinks 1</a>
+                </span>
+            </div>
+            <div class="nav-category hotdrink">
+                <span class="nav-category-item">
+                    <a href="#hotdrink-subcategory-1">hotdrink 1</a>
+                </span>
+            </div>
+            <div class="nav-category hotcoffe">
+                <span class="nav-category-item">
+                    <a href="#hotcoffe-subcategory-1">hotcoffe 1</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="cards" class=" container d-grid">
+        <section class="my-4" id="mostLoved">
+            <h4>most-loved</h4>
+            <div class="tmt_cards my-3" id="mostLoved-subcategory-1">
+                <div class="tmt_card large" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="cupCakes">
+            <h4>Modern Tatlılar</h4>
+            <div class="tmt_cards my-3" id="cupCakes-subcategory-1">
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="meze">
+            <h4>Mezeler</h4>
+            <div class="tmt_cards" id="meze-subcategory-1">
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="kruvasan">
+            <h4>Kruvasanlar</h4>
+            <div class="tmt_cards" id="kruvasan-subcategory-1">
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="cookie">
+            <h4>Kurabiyeler</h4>
+            <div class="tmt_cards" id="cookie-subcategory-1">
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="mofin">
+            <h4>Muffinler</h4>
+            <div class="tmt_cards" id="mofin-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="icecream">
+            <h4>Dondurmalar</h4>
+            <div class="tmt_cards" id="icecream-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="pasta">
+            <h4>Pastalar</h4>
+            <div class="tmt_cards" id="pasta-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tmt_cards" id="pasta-subcategory-2">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="tatli">
+            <h4>Tatlılar</h4>
+            <div class="tmt_cards" id="tatli-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="milshake">
+            <h4>Milkshakeler</h4>
+            <div class="tmt_cards">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="icecoffe">
+            <h4>Soğuk Kahveler</h4>
+            <div class="tmt_cards" id="icecoffe-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="icedrinks">
+            <h4>Soğuk İçecekler</h4>
+            <div class="tmt_cards" id="icedrinks-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="hotdrink">
+            <h4>Sıcak İçecekler</h4>
+            <div class="tmt_cards" id="hotdrink-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="my-4"></p>
+        <section class="my-4" id="hotcoffe">
+            <h4>Sıcak Kahveler</h4>
+            <div class="tmt_cards" id="hotcoffe-subcategory-1">
+                
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+                <div class="tmt_card" data-title="Chocolabs Sarma" data-content="Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan falan filan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nesciunt dolore nam possimus, sunt, reprehenderit fugiat fugit minima labore quibusdam, veritatis quos impedit eligendi. Delectus, vitae. Quia ullam odio minima?" data-image="ornek-img.png">
+                    <img src="ornek-img.png" alt="Chocolate Cake">
+                    <div class="tmt_card-content">
+                        <b>Chocolabs Sarma</b>
+                        <p>Wattle Ekmeği, Çilek, Muz, Gerçek Çikolata, Chocolabs Muahllebisi, Fındık, Badem, Hindistan Cevizi...</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+    <div class="scrollup">
+        <a href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content animate__animated">
+            <span class="popup-close" onclick="closePopup()">×</span>
+            <img id="popupImage" class="popup-image animate__animated">
+            <h2 id="popupTitle" class="popup-title animate__animated"></h2>
+            <p id="popupContent" class="popup-content-text animate__animated"></p>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="framework/js/owl.carousel.js"></script>
+    <script src="framework/js/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

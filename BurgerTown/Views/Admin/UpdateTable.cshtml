@@ -1,0 +1,44 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "UpdateTable";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div style="margin:10px;">
+    <div class="card card-primary">
+        <div class="card-header">
+            <h3 class="card-title">Masa Güncelle</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form method="post" action="/Admin/UpdateTable/" enctype="multipart/form-data">
+            <div class="card-body">
+                <div class="form-group">
+                    <input name="ID" type="text" value="@Model.guncellencekMasa.ID" style="display:none;" />
+                </div>
+                <div class="form-group">
+                    <label>Malzeme Adı</label>
+                    <input name="Name" type="text" value="@Model.guncellencekMasa.Name" class="form-control" id="exampleInputEmail1" required>
+                </div>
+                <div class="form-check">
+                    @Html.CheckBox("isActive", Model.guncellencekMasa.isActive)
+                    <label class="form-check-label" for="exampleCheck1">Aktif Mi?</label>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Güncelle</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script>
+    let btn = document.getElementById("SelectImageButton");
+    let pic = document.getElementById("material_image");
+    let label = document.getElementById("SelectedImagePath");
+    btn.onchange = function () {
+        pic.src = URL.createObjectURL(btn.files[0]);
+        label.innerText = btn.files[0].name;
+    }
+</script>
+

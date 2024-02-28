@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Sipariş Sistemi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="framework/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="framework/css/owl.theme.default.css">
+    <link rel="stylesheet" href="framework/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="company-logo d-grid">
+
+            <!-- <img src="mes.png" alt="logo"> -->
+            <b>Meta POS</b>
+            <!-- <b>POS</b> -->
+        </div>
+        <nav>
+            <button class="btn-medium" id="seating"><a href="tables.html"><i class="fa-solid fa-chair"></i>Seating</a></button>
+            <button class="btn-medium" id="takeout"><i class="fa-solid fa-door-open"></i>çıkış</button>
+            <input type="search" class="nav-search" placeholder="&#xF002; ÜRÜN ARA">
+            <button class="btn-medium" id="settings"><i class="fa-solid fa-gear"></i>ayarlar</button>
+        </nav>
+        <div class="other-inf">
+            <span class="user me-4"><i class="fa-solid fa-user me-2"></i>Maryanne</span>
+            <span class="time">5.22pm</span>
+            <span class="fullscreen-nav" id="fullscreenButton"><i class="fa-solid fa-compress"></i></span>
+        </div>
+    </header>
+    <section class="main-place row" id="main">
+        <aside class="col-5" id="added">
+            <div id="nowsUserInf" class="w-100">
+                <span id="orderNumber">Order <b>#2123</b></span>
+                <span id="tableNumber">Table <b>#3</b></span>
+                <span id="orderDate">January 1, 2025</span>
+            </div>
+            <!-- <h4 class="w-100">Touch an item to view opitons</h4> -->
+            <div id="tableAreaAside">
+                <table class="w-100">
+                    <tbody>
+                        <tr id="tableNames" style="background-color: white;">
+                            <th>Ürün</th>
+                            <th>Adet Belirle</th>
+                            <th>Yalnız Fiyat</th>
+                            <th>Fiyat</th>
+                            <th>Toplam</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="w-100" id="border">
+                <p></p>
+                <div class="d-flex" id="scroll">
+                    <i class="fa-solid fa-chevron-up" id="addedUp"></i>
+                    <b class="mx-2">KAYDIR</b>
+                    <i class="fa-solid fa-chevron-down" id="addedDown"></i>
+                </div>
+            </div>
+            <div class="w-100" id="totalPrice">
+                <div id="orderPickingProcess">
+                    <table>
+                        <tr>
+                            <th>Subtotal:</th>
+                            <th>$25.96</th>
+                        </tr>
+                        <tr>
+                            <th>Discounts:</th>
+                            <th>-$0.00</th>
+                        </tr>
+                        <tr>
+                            <th>Tax (5%):</th>
+                            <th>$1.30</th>
+                        </tr>
+                    </table>
+                    <div id="placeOfTotalPrice"> <b>Total:</b>  <span id="toplamFiyat">$27.26</span> </div>
+                </div>
+            </div>
+            <div id="addedFooter">
+                <button class="btn-footer" id="cancelOrder">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span class="addedFooter-btn-name">iptal</span>
+                </button>
+                <button class="btn-footer">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span class="addedFooter-btn-name">Hold Order</span>
+                </button>
+                <button class="btn-footer">
+                    <i class="fa-solid fa-tag"></i>
+                    <span class="addedFooter-btn-name">indirim</span>
+                </button>
+                <button class="btn-footer">
+                    <i class="fa-solid fa-heart-crack"></i>
+                    <span class="addedFooter-btn-name">ödemeyi böl</span>
+                </button>
+                <button class="btn-footer">
+                    <i class="fa-solid fa-print"></i>
+                    <span class="addedFooter-btn-name">yazdır</span>
+                </button>
+                <button class="btn-footer" id="payOrder">
+                    <i class="fa-solid fa-dollar-sign"></i>
+                    <span class="addedFooter-btn-name">öde</span>
+                </button>
+            </div>
+        </aside>
+        <main class="col-7" id="menuWillAdd">
+            <div id="categoriesArea" >
+                <div class="owl-carousel owl-theme menu-owl">
+                    <div class="cgy-item activeCgl" data-category="sect">All</div>
+                    <div class="cgy-item" data-category="drinks">Drinks</div>
+                    <div class="cgy-item" data-category="meals">Meals Alan Babanss</div>
+                    <div class="cgy-item" data-category="burgers">Hamburger Menüleri YÜkseltme</div>
+                    <div class="cgy-item" data-category="sides">Sides</div>
+                    <div class="cgy-item" data-category="dessert">Desserts</div>
+                    <div class="cgy-item" data-category="chicken">Chicken</div>
+                    <!-- <div class="cgy-item" id="soupCat">Soup</div>
+                    <div class="cgy-item" id="saladCat">Salad</div> -->
+                    <!-- <div class="cgy-item" id="seafoodCat">Seafood</div> -->
+                </div>
+            </div>
+            <div id="productsArea">
+                <section class="sect drinks drinkPop">
+                    <h2>soda pop</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>COLA</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>Diet cola</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>lemon fizz</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>root beer</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>orange</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>cream</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>COLA</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>Diet cola</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>lemon fizz</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>root beer</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>orange</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect drinks drinkPop">
+                    <h2>coffe & tea</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>coffe</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>grey tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>green tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>peppermint</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>jasmine</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>berry tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect meals hamburgerPop">
+                    <h2>Hamburgers</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect burgers hamburgersPop">
+                    <h2>Hamburger Menüleri</h2>
+                    <div class="products have-big-products">
+                        <div class="product product-big">
+                            <div class="image-container">
+                                <img src="hamburger-menu.jpeg" alt="hamb">
+                            </div>
+                            <h5>Tadında Bırakan Menü</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product product-big">
+                            <div class="image-container">
+                                <img src="hamburger-menu2.jpeg" alt="hamb">
+                            </div>
+                            <h5>Doyuran Menü</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect drinks drinkPop">
+                    <h2>soda pop</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>COLA</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>Diet cola</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>lemon fizz</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>root beer</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>orange</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>cream</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>COLA</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>Diet cola</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>lemon fizz</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>root beer</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-glass-water"></i>
+                            <h5>orange</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect dessert dessertPop">
+                    <h2>Puding & Sütlaç & Profiterol</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>coffe</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>grey tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>green tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>peppermint</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>jasmine</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h5>berry tea</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+                <section class="sect meals hamburgerPop">
+                    <h2>Pizza</h2>
+                    <div class="products">
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                        <div class="product">
+                            <i class="fa-solid fa-martini-glass"></i>
+                            <h5>Milkshake</h5>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="w-100" id="menusFooter">
+                <i class="fa-solid fa-chevron-up" id="menusUp"></i>
+                <b class="mx-2">SCROLL</b>
+                <i class="fa-solid fa-chevron-down" id="menusDown"></i>
+            </div>
+        </main>
+    </section>
+
+    <div id="popup">
+        <div class="pop" id="hamburgersPop">
+            <div class="title my-2">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-content">
+                <img src="hamb1.jpeg" class="me-4" alt="hamb"/>
+                <h3>HAMBURGERRRRSSS </h3>
+                <p>Sucuk, yumurta, domates, özel sos, kaşar, özel baharatlar, özel sos</p>
+                <div class="popup-price-content border-bottom my-2 border-top">
+                    <p>532.99 TL</p>
+                    <b>419.19 TL</b>
+                </div>
+                <div class="popupCategories my-4 border-bottom">
+                    <h5>1: Tost</h5>
+                    <ul class="sizing">
+                        <li>Tost Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Özel Tost Karışık</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Klasık Tost Karışık</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Kaşarlı Tost</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sucuklu Tost</p>
+                            <b>+10 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Boyut</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Normal Boy</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Büyük Boy</p>
+                            <b>+15 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>İçecekler</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Kola</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Sprite</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Çıkarılabilir Malzeme Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Domates İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Karabiber Olmasın</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sos İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Ekstra Yan Ürün Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Ekstra Yan Ürün İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Patates Kızartması</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (3 adet)</p>
+                            <b>+30 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (6 adet)</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (12 adet)</p>
+                            <b>+60 TL</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popupCategories my-4 border-bottom">
+                    <h5>2. Tost</h5>
+                    <ul class="sizing">
+                        <li>Tost Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Özel Tost Karışık</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Klasık Tost Karışık</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Kaşarlı Tost</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sucuklu Tost</p>
+                            <b>+10 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Boyut</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Normal Boy</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Büyük Boy</p>
+                            <b>+15 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>İçecekler</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Kola</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Sprite</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Çıkarılabilir Malzeme Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Domates İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Karabiber Olmasın</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sos İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Ekstra Yan Ürün Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Ekstra Yan Ürün İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Patates Kızartması</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (3 adet)</p>
+                            <b>+30 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (6 adet)</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (12 adet)</p>
+                            <b>+60 TL</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popupCategories my-4 ">
+                    <h5>Promosyon</h5>
+                    <ul class="sizing">
+                        <li>Tatlılar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Promosyon Tatlı İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Donut (6 adet)</p>
+                            <b>+40 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Donut (12 adet)</p>
+                            <b>+65 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sütlaç</p>
+                            <b>+20 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Dondurmalar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Promosyon Dondurma İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Algida Maraş Usulü Sade Cup Dondurma (105 ml.)</p>
+                            <b>+40 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Çilekli Dondurma</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Muzlu DOndurma</p>
+                            <b>+20 TL</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="d-flex" id="scroll">
+                    <i class="fa-solid fa-chevron-up footerPopUp"  ></i>
+                    <b class="mx-2">KAYDIR</b>
+                    <i class="fa-solid fa-chevron-down footerPopDown" ></i>
+                </div>
+                <button class="btnAddPopup btn btn-success" disabled>
+                    <span class="totalPopPrice"></span>
+                    Kaydet
+                </button>
+            </div>
+        </div>
+        <div class="pop" id="drinkPop">
+            <div class="title my-2">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-content">
+                <img src="hamb1.jpeg" class="me-4" alt="hamb"/>
+                <h3>99999 Menu</h3>
+                <p>Whooper Hamburger, Patates Kızartması, Kola, Ketçap, Mayonez</p>
+                <div class="popup-price-content border-bottom my-2 border-top">
+                    <p>66.31 TK</p>
+                    <b>31.19 TL</b>
+                </div>
+                <div class="popupCategories my-4">
+                    <h5>Boyut</h5>
+                    <ul class="sizing">
+                        <li>Boyut</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Medium</p>
+                            <b>$0.65</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Large</p>
+                            <b>$0.90</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>XLarge</p>
+                            <b>$1.30</b>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>İçerik</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Turşu</p>
+                            <b>$0.65</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Cheedar</p>
+                            <b>$0.90</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Jambon</p>
+                            <b>$1.30</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popupCategories my-4">
+                    <h5>Extralar</h5>
+                    <ul>
+                        <li>Soslar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Ketçap</p>
+                            <b>$0.65</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Mayonez</p>
+                            <b>$0.90</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Hardal</p>
+                            <b>$1.30</b>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <button class="btn btn-danger" id="exitIt">İptal</button> -->
+                <!-- <button id="addItem">Ekle</button> -->
+            </div>
+            <div class="popup-footer">
+                <div class="d-flex" id="scroll">
+                    <i class="fa-solid fa-chevron-up footerPopUp"></i>
+                    <b class="mx-2">KAYDIR</b>
+                    <i class="fa-solid fa-chevron-down footerPopDown"></i>
+                </div>
+                <button class="btnAddPopup btn btn-success" disabled>
+                    <span class="totalPopPrice"></span>
+                    Kaydet
+                </button>
+            </div>
+        </div>
+        <div class="pop" id="hamburgerPop">
+            <div class="title my-2">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-content">
+                <img src="hamb1.jpeg" class="me-4" alt="hamb"/>
+                <h3>Klasik Kaşarlı Mahmut Tost Menü İki Kişilik</h3>
+                <p>Sucuk, yumurta, domates, özel sos, kaşar, özel baharatlar, özel sos</p>
+                <div class="popup-price-content border-bottom my-2 border-top">
+                    <p>532.99 TL</p>
+                    <b>333.19 TL</b>
+                </div>
+                <div class="popupCategories my-4 border-bottom">
+                    <h5>1: Tost</h5>
+                    <ul class="sizing">
+                        <li>Tost Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Özel Tost Karışık</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Klasık Tost Karışık</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Kaşarlı Tost</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sucuklu Tost</p>
+                            <b>+10 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Boyut</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Normal Boy</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Büyük Boy</p>
+                            <b>+15 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>İçecekler</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Kola</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Sprite</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Çıkarılabilir Malzeme Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Domates İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Karabiber Olmasın</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sos İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Ekstra Yan Ürün Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Ekstra Yan Ürün İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Patates Kızartması</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (3 adet)</p>
+                            <b>+30 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (6 adet)</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (12 adet)</p>
+                            <b>+60 TL</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popupCategories my-4 border-bottom">
+                    <h5>2. Tost</h5>
+                    <ul class="sizing">
+                        <li>Tost Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Özel Tost Karışık</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Klasık Tost Karışık</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Kaşarlı Tost</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sucuklu Tost</p>
+                            <b>+10 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Boyut</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Normal Boy</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Büyük Boy</p>
+                            <b>+15 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>İçecekler</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Kola</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>330ml Sprite</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Çıkarılabilir Malzeme Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Domates İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Karabiber Olmasın</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sos İtemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li>Ekstra Yan Ürün Seçimi</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Ekstra Yan Ürün İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Patates Kızartması</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (3 adet)</p>
+                            <b>+30 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (6 adet)</p>
+                            <b>+45 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Soğan Halkası (12 adet)</p>
+                            <b>+60 TL</b>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popupCategories my-4 ">
+                    <h5>Promosyon</h5>
+                    <ul class="sizing">
+                        <li>Tatlılar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Promosyon Tatlı İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Donut (6 adet)</p>
+                            <b>+40 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Donut (12 adet)</p>
+                            <b>+65 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Sütlaç</p>
+                            <b>+20 TL</b>
+                        </li>
+                    </ul>
+                    <ul class="sizing">
+                        <li>Dondurmalar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Promosyon Dondurma İstemiyorum</p>
+                            <b>Ücretsiz</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Algida Maraş Usulü Sade Cup Dondurma (105 ml.)</p>
+                            <b>+40 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Çilekli Dondurma</p>
+                            <b>+20 TL</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Muzlu DOndurma</p>
+                            <b>+20 TL</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="d-flex" id="scroll">
+                    <i class="fa-solid fa-chevron-up footerPopUp"  ></i>
+                    <b class="mx-2">KAYDIR</b>
+                    <i class="fa-solid fa-chevron-down footerPopDown" ></i>
+                </div>
+                <button class="btnAddPopup btn btn-success" disabled>
+                    <span class="totalPopPrice"></span>
+                    Kaydet
+                </button>
+            </div>
+        </div>
+        <div class="pop" id="dessertPop">
+            <div class="title my-2">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="popup-content">
+                <img src="hamb1.jpeg" class="me-4" alt="hamb"/>
+                <h3>Datlı</h3>
+                <p>Bu bir tatlıdır</p>
+                <div class="popup-price-content border-bottom my-2 border-top">
+                    <p>89.31 TL</p>
+                    <b>65.19 TL</b>
+                </div>
+                <div class="popupCategories my-4">
+                    <h5>Boyut</h5>
+                    <ul class="sizing">
+                        <li>
+                            <input type="checkbox">
+                            <p>Medium</p>
+                            <b>$0.65</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Large</p>
+                            <b>$0.90</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>XLarge</p>
+                            <b>$1.30</b>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Extralar</li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Kaşar</p>
+                            <b>13.32</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Bal</p>
+                            <b>19.31</b>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <p>Süt</p>
+                            <b>$1.30</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <div class="d-flex" id="scroll">
+                    <i class="fa-solid fa-chevron-up footerPopUp"></i>
+                    <b class="mx-2">KAYDIR</b>
+                    <i class="fa-solid fa-chevron-down footerPopDown"></i>
+                </div>
+                <button class="btnAddPopup btn btn-success" disabled>
+                    <span class="totalPopPrice"></span>
+                    Kaydet
+                </button>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="framework/js/owl.carousel.js"></script>
+    <script src="framework/js/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

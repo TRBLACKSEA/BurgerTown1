@@ -1,0 +1,197 @@
+﻿@model BurgerTown.Models.BaseModel
+@{
+    ViewBag.Title = "QRAppMenu";
+    Layout = "~/Views/Shared/_POSLayout.cshtml";
+}
+@{
+    decimal araToplam = 0.0m;
+    decimal kdvTutari = 0.0m;
+    decimal toplamTutar = 0.0m;
+    decimal indirimMiktari = 0.0m;
+    int NewOrderID = Model.context.FisBaliklari.ToList().Count + 1;
+}
+<section class="main-place row" id="main">
+    <aside class="col-5" id="added">
+        <div id="nowsUserInf" class="w-100">
+            <span id="orderNumber">Sipariş: <b>#@NewOrderID</b></span>
+
+            <span id="tableNumber"><b>Paket Sipariş</b></span>
+            
+            <span id="orderDate">Tarih: <b>@DateTime.Now.ToString("dd.M.yyyy")</b></span>
+        </div>
+        <!-- <h4 class="w-100">Touch an item to view opitons</h4> -->
+        <div id="tableAreaAside">
+            <table class="w-100">
+                <thead>
+                    <tr id="tableNames" style="background-color: white;">
+                        <th>Malzeme</th>
+                        <th>Fiyat</th>
+                        <th>Adet</th>
+                        <th>Toplam</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var fisMalzemesi in BurgerTown.Models.BaseModel.GeciciSiparisFisi)
+                    {
+                        <tr id="tableNames" style="background-color: white;">
+                            <th style="color:black;">@fisMalzemesi.Name</th>
+                            <th style="color:black;">@fisMalzemesi.Price ₺</th>
+                            <th style="color:black;">1</th>
+                            <th style="color:black;">@fisMalzemesi.Price ₺</th>
+                            <th style="color:black;">
+                                <a href="/POS/DeleteFromFiche/@fisMalzemesi.ID"><img src="~/AdminLTE-3.2.0/dist/img/delete.png" style="width:16px;height:16px;" /></a>
+                            </th>
+                        </tr>
+                        araToplam += fisMalzemesi.Price;
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="w-100" id="border">
+            <p></p>
+            <div class="d-flex" id="scroll">
+                <i class="fa-solid fa-chevron-up" id="addedUp"></i>
+                <b class="mx-2">KAYDIR</b>
+                <i class="fa-solid fa-chevron-down" id="addedDown"></i>
+            </div>
+        </div>
+        <div class="w-100" id="totalPrice">
+            <div id="orderPickingProcess">
+                <table>
+                    <tr>
+                        <th>AltToplam:</th>
+                        <th>@araToplam ₺</th>
+                    </tr>
+                    <tr>
+                        <th>KDV (20%):</th>
+                        @{ kdvTutari = araToplam * 20 / 100;}
+                        <th>@kdvTutari ₺</th>
+                    </tr>
+                    @{ toplamTutar = araToplam + kdvTutari;}
+                    <tr>
+                        @if (BurgerTown.Models.BaseModel.uygulananKampanya != null)
+                        {
+                            <th>Uygulanan İndirim:@BurgerTown.Models.BaseModel.uygulananKampanya.Name</th>
+                            indirimMiktari = toplamTutar * BurgerTown.Models.BaseModel.uygulananKampanya.Discount / 100;
+                            <th>-@indirimMiktari (%@BurgerTown.Models.BaseModel.uygulananKampanya.Discount)</th>
+
+                        }
+                        else
+                        {
+                            <th> Uygulanan İndirim: -</th>
+                            <th> -0.00 ₺</th>
+                        }
+                    </tr>
+                </table>
+                @{
+                    toplamTutar -= indirimMiktari;
+                }
+                <div id="placeOfTotalPrice"> <b>Toplam:</b>  <span id="toplamFiyat">@toplamTutar ₺</span> </div>
+                @{
+                    BurgerTown.Models.BaseModel.KDVOrani = 20;
+                    BurgerTown.Models.BaseModel.KDVMiktari = kdvTutari;
+                    BurgerTown.Models.BaseModel.AraToplam = araToplam;
+                    BurgerTown.Models.BaseModel.FisToplam = toplamTutar;
+                }
+            </div>
+        </div>
+        <div id="addedFooter">
+            <button class="btn-footer" id="cancelOrder">
+                <i class="fa-solid fa-xmark"></i>
+                <span class="addedFooter-btn-name">iptal</span>
+            </button>
+            <a href="/POS/RemoveAppliyingCampaign/" class="btn-footer">
+                <i class="fa-solid fa-tag"></i>
+                <span class="addedFooter-btn-name">Uyg. Kampanyayı Kaldır</span>
+            </a>
+            <button class="btn-footer">
+                <i class="fa-solid fa-heart-crack"></i>
+                <span class="addedFooter-btn-name">ödemeyi böl</span>
+            </button>
+            <button class="btn-footer">
+                <i class="fa-solid fa-print"></i>
+                <span class="addedFooter-btn-name">yazdır</span>
+            </button>
+            <a href="/POS/CashPurchase/" class="btn-footer" id="payOrder">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span class="addedFooter-btn-name">Nakit Öde</span>
+            </a>
+            <a href="/POS/CardPurchase/" class="btn-footer">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="addedFooter-btn-name">Kartla Öde</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="col-7" id="menuWillAdd">
+        <div id="categoriesArea">
+            <div class="owl-carousel owl-theme menu-owl">
+                <div class="offers-item" style="background-color: #0094ff;" id="offers">
+                    <img src="~/AdminLTE-3.2.0/dist/img/discount.png" style="width:32px; height:32px; position:absolute; margin-left:8rem; margin-bottom:2.2rem;" alt="Alternate Text" />
+                    Kampanyalar
+                </div>
+                <div class="cgy-item activeCgl" data-category="sect">Hepsi</div>
+
+                @foreach (var kategori in Model.kategoriler)
+                {
+                    int kategoriMalzemeSayisi = Model.context.Malzemeler.Where(q => q.CategoryID == kategori.ID).ToList().Count;
+                    if (kategoriMalzemeSayisi > 0)
+                    {
+                        <div class="cgy-item" data-category="@kategori.Description">@kategori.Description</div>
+                    }
+
+                }
+            </div>
+        </div>
+        <div id="productsArea">
+            @foreach (var kategori in Model.kategoriler)
+            {
+                List<BurgerTown.Models.Malzeme> KategoriMalzemeleri = Model.malzemeler.Where(q => q.CategoryID == kategori.ID).ToList();
+                if (KategoriMalzemeleri.Count > 0)
+                {
+                    <section class="sect @kategori.Description hamburgerPop">
+                        <h2>@kategori.Description</h2>
+                        <div class="products">
+
+                            @foreach (var malzeme in KategoriMalzemeleri)
+                            {
+
+                                <div class="product" style="width:250px;height:300px;">
+                                    <div>
+                                        <img src="@malzeme.ImagePath" style="width:100%; height:150px;" alt="@malzeme.Name" />
+                                    </div>
+                                    <h6 class="px-2">@malzeme.Name</h6>
+                                    <p class="px-2">@malzeme.Description</p>
+                                    <b class="px-2">@malzeme.Price ₺</b>
+                                    <a href="/POS/AddSelectedToFiche/@malzeme.ID"><i class="fa-solid fa-circle-plus"></i></a>
+                                </div>
+                            }
+                        </div>
+                    </section>
+                }
+
+            }
+        </div>
+        <div class="offers d-none">
+            @foreach (var kampanya in Model.kampanyalar)
+            {
+                <a href="/POS/SelectOffer/@kampanya.ID">
+                    <div class="offer">
+                        <h2>@kampanya.Name</h2>
+                        <b>@kampanya.Description</b>
+                    </div>
+                </a>
+            }
+        </div>
+
+
+        <div class="w-100" id="menusFooter">
+            <i class="fa-solid fa-chevron-up" id="menusUp"></i>
+            <b class="mx-2">SCROLL</b>
+            <i class="fa-solid fa-chevron-down" id="menusDown"></i>
+        </div>
+    </main>
+</section>
+<script src="~/restorant/test.js" type="text/javascript"></script>
